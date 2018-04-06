@@ -52,7 +52,7 @@ It will insert the code automatically
 In the view that's going to validate the captcha
 
     from flask import Flask
-    from flask_recaptcha import ReCaptcha
+    from flask_google_recaptcha import GoogleReCaptcha
 
     app = Flask(__name__)
     recaptcha = ReCaptcha(app=app)
