@@ -4,10 +4,10 @@ Can be used as standalone
 """
 
 __NAME__ = "Flask-ReCaptcha"
-__version__ = "0.4.2"
+__version__ = "0.5.0"
 __license__ = "MIT"
-__author__ = "Mardix"
-__copyright__ = "(c) 2015 Mardix"
+__author__ = "Anderson Araujo (coderpy)"
+__copyright__ = "(c) 2018 Anderson Araujo (coderpy)"
 
 try:
     from flask import request
@@ -48,7 +48,8 @@ class ReCaptcha(object):
     def init_app(self, app=None):
         self.__init__(site_key=app.config.get("RECAPTCHA_SITE_KEY"),
                       secret_key=app.config.get("RECAPTCHA_SECRET_KEY"),
-                      is_enabled=app.config.get("RECAPTCHA_ENABLED", DEFAULTS.IS_ENABLED),
+                      is_enabled=app.config.get(
+                          "RECAPTCHA_ENABLED", DEFAULTS.IS_ENABLED),
                       theme=app.config.get("RECAPTCHA_THEME", DEFAULTS.THEME),
                       type=app.config.get("RECAPTCHA_TYPE", DEFAULTS.TYPE),
                       size=app.config.get("RECAPTCHA_SIZE", DEFAULTS.SIZE),

@@ -1,6 +1,6 @@
 # Flask-ReCaptcha
 
-The new Google ReCaptcha implementation for Flask without Flask-WTF.
+The Working Google ReCaptcha implementation for Flask without Flask-WTF.
 
 Can also be used as standalone
 
@@ -8,7 +8,9 @@ Can also be used as standalone
 
 ## Install
 
-    pip install flask-recaptcha
+    pip install git+https://github.com/AndersonFirmino/flask-recaptcha.git
+
+    To use this with Google App Engine you will need to install requests==2.3.0 :cake:
 
 # Usage
 
@@ -43,6 +45,8 @@ It will insert the code automatically
     </form>
 
 
+
+
 ### Verify the captcha
 
 In the view that's going to validate the captcha
@@ -63,6 +67,8 @@ In the view that's going to validate the captcha
             # FAILED
             pass
 
+
+Remember to set SITE_KEY and SECRET_KEY if not it does not appear!
 
 ## Api
 
@@ -113,5 +119,5 @@ The following are **Optional** arguments.
 
 ---
 
-(c) 2015 Mardix
+2018 Anderson Araujo (coderpy) :snake:
 
