@@ -119,5 +119,5 @@ The following are **Optional** arguments.
 
 ---
 
-2018 Anderson Araujo (coderpy) :snake:
+Anderson Araujo (coderpy) :snake:
 
