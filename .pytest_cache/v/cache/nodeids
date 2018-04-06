@@ -1,0 +1,6 @@
+[
+  "test_flask_google_recaptcha.py::test_recaptcha_enabled", 
+  "test_flask_google_recaptcha.py::test_recaptcha_enabled_flask", 
+  "test_flask_google_recaptcha.py::test_recaptcha_disabled", 
+  "test_flask_google_recaptcha.py::test_recaptcha_disabled_flask"
+]

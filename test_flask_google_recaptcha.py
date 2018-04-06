@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config.update({
     "debug": True,
     "RECAPTCHA_SITE_KEY": "SITE_KEY",
-    "RECAPTCHA_SITE_SECRET": "SECRET",
+    "RECAPTCHA_SITE_SECRET": "SECRET_KEY",
     "RECAPTCHA_ENABLED": True
 })
 
