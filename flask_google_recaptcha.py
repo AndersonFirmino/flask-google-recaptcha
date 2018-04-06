@@ -3,7 +3,7 @@ The new Google ReCaptcha implementation for Flask without Flask-WTF
 Can be used as standalone
 """
 
-__NAME__ = "Flask-ReCaptcha"
+__NAME__ = "Flask-GoogleReCaptcha"
 __version__ = "0.5.0"
 __license__ = "MIT"
 __author__ = "Anderson Araujo (coderpy)"
