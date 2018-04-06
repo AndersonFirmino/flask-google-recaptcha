@@ -25,7 +25,7 @@ class DEFAULTS(object):
     TABINDEX = 0
 
 
-class ReCaptcha(object):
+class GoogleReCaptcha(object):
 
     VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
     site_key = None

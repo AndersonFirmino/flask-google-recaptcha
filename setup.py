@@ -1,8 +1,8 @@
 
 from setuptools import setup, find_packages
-import flask_recaptcha
+import flask_google_recaptcha
 
-PACKAGE = flask_recaptcha
+PACKAGE = flask_google_recaptcha
 
 setup(
     name=PACKAGE.__NAME__,
@@ -12,15 +12,15 @@ setup(
     author_email='anderson.araujoprog@gmail.com',
     description="The working Google ReCaptcha implementation for Flask without Flask-WTF",
     long_description=PACKAGE.__doc__,
-    url='https://github.com/AndersonFirmino/flask-recaptcha',
-    download_url='http://github.com/AndersonFirmino/flask-recaptcha/tarball/master',
+    url='https://github.com/AndersonFirmino/flask-google-recaptcha',
+    download_url='http://github.com/AndersonFirmino/flask-google-recaptcha/tarball/master',
     py_modules=['flask_recaptcha'],
     include_package_data=True,
     install_requires=[
         "flask",
         "requests"
     ],
-    keywords=['flask', 'recaptcha', "validate"],
+    keywords=['flask', 'recaptcha', "validate", "google"],
     platforms='any',
     classifiers=[
         'Environment :: Web Environment',

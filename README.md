@@ -1,4 +1,4 @@
-# Flask-ReCaptcha
+# Flask-Google-ReCaptcha
 
 The Working Google ReCaptcha implementation for Flask without Flask-WTF.
 
@@ -8,7 +8,7 @@ Can also be used as standalone
 
 ## Install
 
-    pip install git+https://github.com/AndersonFirmino/flask-recaptcha.git
+    pip install git+https://github.com/AndersonFirmino/flask-google-recaptcha.git
 
 To use this with Google App Engine you will need to install requests==2.3.0 :cake:
 
@@ -17,7 +17,7 @@ To use this with Google App Engine you will need to install requests==2.3.0 :cak
 ### Implementation view.py
 
     from flask import Flask
-    from flask_recaptcha import ReCaptcha
+    from flask_google_recaptcha import GoogleReCaptcha
 
     app = Flask(__name__)
     recaptcha = ReCaptcha(app=app)
