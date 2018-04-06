@@ -10,7 +10,7 @@ Can also be used as standalone
 
     pip install git+https://github.com/AndersonFirmino/flask-recaptcha.git
 
-    To use this with Google App Engine you will need to install requests==2.3.0 :cake:
+To use this with Google App Engine you will need to install requests==2.3.0 :cake:
 
 # Usage
 
