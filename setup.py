@@ -4,6 +4,10 @@ import flask_google_recaptcha
 
 PACKAGE = flask_google_recaptcha
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+
+
 setup(
     name=PACKAGE.__NAME__,
     version=PACKAGE.__version__,
@@ -11,7 +15,9 @@ setup(
     author=PACKAGE.__author__,
     author_email='anderson.araujoprog@gmail.com',
     description="The working Google ReCaptcha implementation for Flask without Flask-WTF",
-    long_description=PACKAGE.__doc__,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    setup_requires=['setuptools>=38.6.0'],
     url='https://github.com/AndersonFirmino/flask-google-recaptcha',
     download_url='http://github.com/AndersonFirmino/flask-google-recaptcha/tarball/master',
     py_modules=['flask_recaptcha'],
