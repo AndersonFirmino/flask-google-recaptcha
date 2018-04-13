@@ -70,7 +70,7 @@ class GoogleReCaptcha(object):
          data-tabindex="{TABINDEX}"></div>
         """.format(SITE_KEY=self.site_key, THEME=self.theme, TYPE=self.type, SIZE=self.size, TABINDEX=self.tabindex))
 
-    def verify(self, response=None, remote_ip=None):
+     def verify(self, response=None, remote_ip=None):
         if self.is_enabled:
             data = {
                 "secret": self.secret_key,
@@ -79,5 +79,10 @@ class GoogleReCaptcha(object):
             }
 
             r = requests.get(self.VERIFY_URL, params=data)
-            return r.json()["success"] if r.status_code == 200 else False
+            if r.json()["success"] or r.json()["error-codes"][0] == "timeout-or-duplicate" and r.status_code == 200:
+                return True
+
+            else:
+                return False
+
         return True

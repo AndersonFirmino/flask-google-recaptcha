@@ -20,11 +20,11 @@ To use this with Google App Engine you will need to install requests==2.3.0 :cak
     from flask_google_recaptcha import GoogleReCaptcha
 
     app = Flask(__name__)
-    recaptcha = ReCaptcha(app=app)
+    recaptcha = GoogleReCaptcha(app=app)
     
     #or 
     
-    recaptcha = Recaptcha()
+    recaptcha = GoogleReCaptcha()
     recaptcha.init_app(app)
     
 
@@ -55,7 +55,7 @@ In the view that's going to validate the captcha
     from flask_google_recaptcha import GoogleReCaptcha
 
     app = Flask(__name__)
-    recaptcha = ReCaptcha(app=app)
+    recaptcha = GoogleReCaptcha(app=app)
 
     @route("/submit", methods=["POST"])
     def submit():
