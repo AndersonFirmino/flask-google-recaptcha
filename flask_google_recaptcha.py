@@ -26,7 +26,6 @@ class DEFAULTS(object):
 
 
 class GoogleReCaptcha(object):
-
     VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
     site_key = None
     secret_key = None
@@ -70,7 +69,7 @@ class GoogleReCaptcha(object):
          data-tabindex="{TABINDEX}"></div>
         """.format(SITE_KEY=self.site_key, THEME=self.theme, TYPE=self.type, SIZE=self.size, TABINDEX=self.tabindex))
 
-     def verify(self, response=None, remote_ip=None):
+    def verify(self, response=None, remote_ip=None):
         if self.is_enabled:
             data = {
                 "secret": self.secret_key,
