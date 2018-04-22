@@ -13,7 +13,7 @@ Can also be used as standalone
 
     pip install git+https://github.com/AndersonFirmino/flask-google-recaptcha.git
 
-    If you are using pipenv :cake:
+    If you are using pipenv
     pipenv install Flask-GoogleReCaptcha
 
 To use this with Google App Engine you will need to install requests==2.3.0 :cake:
