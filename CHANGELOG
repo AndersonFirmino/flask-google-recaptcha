@@ -1,3 +1,7 @@
+- 0.5.4
+    - Fixed import error
+    - refatoctoring project structure
+
 - 0.5.2
 	- Fixed THE BIG ERROR
 

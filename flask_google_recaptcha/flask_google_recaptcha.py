@@ -3,12 +3,6 @@ The new Google ReCaptcha implementation for Flask without Flask-WTF
 Can be used as standalone
 """
 
-__NAME__ = "Flask-GoogleReCaptcha"
-__version__ = "0.5.2"
-__license__ = "MIT"
-__author__ = "Anderson Araujo (coderpy)"
-__copyright__ = "(c) 2018 Anderson Araujo (coderpy)"
-
 try:
     from flask import request
     from jinja2 import Markup

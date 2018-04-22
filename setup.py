@@ -1,5 +1,5 @@
-
-from setuptools import setup, find_packages
+from setuptools import setup
+from setuptools import find_packages
 import flask_google_recaptcha
 
 PACKAGE = flask_google_recaptcha
@@ -7,9 +7,8 @@ PACKAGE = flask_google_recaptcha
 with open("README.md", "r") as f:
     long_description = f.read()
 
-
 setup(
-    name=PACKAGE.__NAME__,
+    name="Flask-GoogleRecaptcha",
     version=PACKAGE.__version__,
     license=PACKAGE.__license__,
     author=PACKAGE.__author__,
@@ -19,6 +18,7 @@ setup(
     long_description_content_type='text/markdown',
     setup_requires=['setuptools>=38.6.0'],
     url='https://github.com/AndersonFirmino/flask-google-recaptcha',
+    packages=find_packages(),
     download_url='http://github.com/AndersonFirmino/flask-google-recaptcha/tarball/master',
     py_modules=['flask_recaptcha'],
     include_package_data=True,
@@ -45,5 +45,5 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
-    zip_safe=False
+    zip_safe=True
 )
