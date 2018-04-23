@@ -13,7 +13,12 @@ __all__ = ("GoogleReCaptcha",)
 try:
     from flask import request
     from jinja2 import Markup
-    from requests import get
+    """to be able to use in GAE Standard only 
+    the native libs should be used"""
+    import urllib2
+
+    from urllib import urlencode
+    import json
 except ImportError as ex:
     print("Missing dependencies")
 
@@ -77,12 +82,17 @@ class GoogleReCaptcha(object):
                 "response": response or request.form.get('g-recaptcha-response'),
                 "remoteip": remote_ip or request.environ.get('REMOTE_ADDR')
             }
+            #adapatation to default libs
+            resp =urllib2.urlopen(self.VERIFY_URL+"?"+urlencode(data))
+            
+            data = resp.read()
+            
+            content =  json.loads(data)
 
-            r = get(self.VERIFY_URL, params=data)
-            if r.json()["success"] or r.json()["error-codes"][0] == "timeout-or-duplicate" and r.status_code == 200:
+            if content["success"] or content["error-codes"][0] == "timeout-or-duplicate" and resp.code == 200:
                 return True
 
             else:
                 return False
-
+                
         return True
