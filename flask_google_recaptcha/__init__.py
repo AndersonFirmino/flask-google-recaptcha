@@ -3,24 +3,24 @@ The new Google ReCaptcha implementation for Flask without Flask-WTF
 Can be used as standalone
 """
 
-__version__ = "0.5.5"
+__version__ = "0.5.6"
 __license__ = "MIT"
 __author__ = "Anderson Araujo (coderpy)"
 __copyright__ = "(c) 2018 Anderson Araujo (coderpy)"
 
 __all__ = ("GoogleReCaptcha",)
 
-try:
-    from flask import request
-    from jinja2 import Markup
-    """to be able to use in GAE Standard only 
-    the native libs should be used"""
-    import urllib2
+from flask import request
+from jinja2 import Markup
+from json import loads
 
+try:
+    from urllib.request import urlopen
+    from urllib.parse import urlencode
+
+except ImportError:
+    from urllib2 import urlopen
     from urllib import urlencode
-    import json
-except ImportError as ex:
-    print("Missing dependencies")
 
 
 class DEFAULTS(object):
@@ -82,17 +82,18 @@ class GoogleReCaptcha(object):
                 "response": response or request.form.get('g-recaptcha-response'),
                 "remoteip": remote_ip or request.environ.get('REMOTE_ADDR')
             }
-            #adapatation to default libs
-            resp =urllib2.urlopen(self.VERIFY_URL+"?"+urlencode(data))
-            
+            import ipdb;
+            ipdb.set_trace()
+            resp = urlopen(self.VERIFY_URL + "?" + urlencode(data))
+
             data = resp.read()
-            
-            content =  json.loads(data)
+
+            content = loads(data)
 
             if content["success"] or content["error-codes"][0] == "timeout-or-duplicate" and resp.code == 200:
                 return True
 
             else:
                 return False
-                
+
         return True

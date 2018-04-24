@@ -5,9 +5,10 @@ name = "pypi"
 
 [packages]
 flask = "*"
-requests = "*"
+Jinja2 = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3.6"

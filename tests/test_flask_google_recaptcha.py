@@ -1,4 +1,3 @@
-4
 from flask import Flask
 from flask_google_recaptcha import GoogleReCaptcha
 

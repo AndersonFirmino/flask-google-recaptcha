@@ -1,3 +1,7 @@
+- 0.5.6
+    - Pure Python version
+    - Fixes for working in any environment
+
 - 0.5.5
     - Some refactoring
 

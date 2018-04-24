@@ -1,4 +1,6 @@
-# Flask-Google-ReCaptcha
+# Flask Google ReCaptcha
+
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
 The Working Google ReCaptcha implementation for Flask without Flask-WTF.
 
@@ -9,16 +11,19 @@ Can also be used as standalone
 ## Install
     pip install Flask-GoogleReCaptcha
 
-    or
+    # or
 
     pip install git+https://github.com/AndersonFirmino/flask-google-recaptcha.git
 
     If you are using pipenv
     pipenv install Flask-GoogleReCaptcha
 
-~~To use this with Google App Engine you will need to install requests==2.3.0 :cake:~~
 
-The requests lib where changed to default python libs to be able to run this package in Google App Engine Standard
+This implementation is pure and has no dependencies from third parties. Works in both Python2 and Python3.
+You can use it in any flask project.
+
+Has Google App Engine (GAE) support!
+
 
 # Usage
 
@@ -30,7 +35,7 @@ The requests lib where changed to default python libs to be able to run this pac
     app = Flask(__name__)
     recaptcha = GoogleReCaptcha(app=app)
     
-    #or 
+    # or
     
     recaptcha = GoogleReCaptcha()
     recaptcha.init_app(app)

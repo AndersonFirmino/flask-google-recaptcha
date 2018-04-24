@@ -24,9 +24,9 @@ setup(
     include_package_data=True,
     install_requires=[
         "flask",
-        "requests"
+        "jinja2"
     ],
-    keywords=['flask', 'recaptcha', "validate", "google"],
+    keywords=["flask", "recaptcha", "validate", "google", "google app engine", "not a robot"],
     platforms='any',
     classifiers=[
         'Environment :: Web Environment',
