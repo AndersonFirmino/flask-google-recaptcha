@@ -3,7 +3,7 @@ The new Google ReCaptcha implementation for Flask without Flask-WTF
 Can be used as standalone
 """
 
-__version__ = "0.5.6"
+__version__ = "0.5.7"
 __license__ = "MIT"
 __author__ = "Anderson Araujo (coderpy)"
 __copyright__ = "(c) 2018 Anderson Araujo (coderpy)"
@@ -82,7 +82,7 @@ class GoogleReCaptcha(object):
                 "response": response or request.form.get('g-recaptcha-response'),
                 "remoteip": remote_ip or request.environ.get('REMOTE_ADDR')
             }
-            
+
             resp = urlopen(self.VERIFY_URL + "?" + urlencode(data))
 
             data = resp.read()

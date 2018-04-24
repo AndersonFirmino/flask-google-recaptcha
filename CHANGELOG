@@ -1,3 +1,6 @@
+- 0.5.7
+    - Removing debug packages.
+
 - 0.5.6
     - Pure Python version
     - Fixes for working in any environment
