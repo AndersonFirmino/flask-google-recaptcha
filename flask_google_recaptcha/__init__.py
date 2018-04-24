@@ -82,8 +82,7 @@ class GoogleReCaptcha(object):
                 "response": response or request.form.get('g-recaptcha-response'),
                 "remoteip": remote_ip or request.environ.get('REMOTE_ADDR')
             }
-            import ipdb;
-            ipdb.set_trace()
+            
             resp = urlopen(self.VERIFY_URL + "?" + urlencode(data))
 
             data = resp.read()
