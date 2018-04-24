@@ -16,7 +16,9 @@ Can also be used as standalone
     If you are using pipenv
     pipenv install Flask-GoogleReCaptcha
 
-To use this with Google App Engine you will need to install requests==2.3.0 :cake:
+~~To use this with Google App Engine you will need to install requests==2.3.0 :cake:~~
+
+The requests lib where changed to default python libs to be able to run this package in Google App Engine Standard
 
 # Usage
 
@@ -122,6 +124,18 @@ The following are **Optional** arguments.
     RECAPTCHA_TYPE = "image"
     RECAPTCHA_SIZE = "compact"
     RECAPTCHA_RTABINDEX = 10
+## Google App Engine Standard implementation
+
+To run this package with flask on App Engine Standard clone this repo to your ptoject folder
+Your project structure should look like this:
+
+    FlaskProjectFolder
+    |-flask_google_recaptcha
+    |   |-__init__.py
+    |-main.py (main flask app)
+    ...
+
+If your flask project folder looks like as shown above, all the imports stated previously stay the same :cake:
 
 ---
 
