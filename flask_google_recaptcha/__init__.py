@@ -3,7 +3,7 @@ The new Google ReCaptcha implementation for Flask without Flask-WTF
 Can be used as standalone
 """
 
-__version__ = "0.5.7"
+__version__ = "0.5.8"
 __license__ = "MIT"
 __author__ = "Anderson Araujo (coderpy)"
 __copyright__ = "(c) 2018 Anderson Araujo (coderpy)"

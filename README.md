@@ -34,12 +34,12 @@ Has Google App Engine (GAE) support!
 
     app = Flask(__name__)
     recaptcha = GoogleReCaptcha(app=app)
-    
+
     # or
-    
+
     recaptcha = GoogleReCaptcha()
     recaptcha.init_app(app)
-    
+
 
 ### In your template: **{{ recaptcha }}**
 
@@ -129,20 +129,7 @@ The following are **Optional** arguments.
     RECAPTCHA_TYPE = "image"
     RECAPTCHA_SIZE = "compact"
     RECAPTCHA_RTABINDEX = 10
-## Google App Engine Standard implementation
-
-To run this package with flask on App Engine Standard clone this repo to your ptoject folder
-Your project structure should look like this:
-
-    FlaskProjectFolder
-    |-flask_google_recaptcha
-    |   |-__init__.py
-    |-main.py (main flask app)
-    ...
-
-If your flask project folder looks like as shown above, all the imports stated previously stay the same :cake:
 
 ---
 
 Anderson Araujo (coderpy) :snake:
-
